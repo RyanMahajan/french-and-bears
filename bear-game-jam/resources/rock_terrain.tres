@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="terrain_res" load_steps=6 format=3 uid="uid://c1gkx3yretey7"]
+
+[ext_resource type="Texture2D" uid="uid://cd1y1rl8sgnvy" path="res://assets/background_assets/grass-leaf-plant-11-svgrepo-com.svg" id="1_8112v"]
+[ext_resource type="Script" uid="uid://twgk4tukwufi" path="res://scripts/terrain_res.gd" id="1_v5bbr"]
+[ext_resource type="Texture2D" uid="uid://c3n6ulyl08vtv" path="res://assets/background_assets/grass-leaf-plant-16-svgrepo-com.svg" id="2_swd84"]
+[ext_resource type="Texture2D" uid="uid://0jv7en0tumg" path="res://assets/background_assets/grass-leaf-plant-20-svgrepo-com.svg" id="3_38j4r"]
+[ext_resource type="Texture2D" uid="uid://d4co4ox6xyvje" path="res://assets/background_assets/tree.svg" id="4_w1cci"]
+
+[resource]
+script = ExtResource("1_v5bbr")
+spawns = Array[Vector2]([Vector2(414, 63), Vector2(128, 426), Vector2(363, 427), Vector2(259, 311), Vector2(443, 266), Vector2(344, 159), Vector2(214, 38), Vector2(150, 196), Vector2(86, 115), Vector2(69, 315)])
+elements = Array[Texture2D]([ExtResource("1_8112v"), ExtResource("2_swd84"), ExtResource("3_38j4r"), ExtResource("4_w1cci")])
+background = Color(0.86553, 0.625012, 0.427678, 1)
