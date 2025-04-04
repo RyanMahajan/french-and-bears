@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbd1cyu15gj5y"]
+[gd_scene load_steps=10 format=3 uid="uid://cbd1cyu15gj5y"]
 
 [ext_resource type="PackedScene" uid="uid://cf2x5ntnsk0km" path="res://scenes/player.tscn" id="1_tipki"]
 [ext_resource type="Resource" uid="uid://c1gkx3yretey7" path="res://resources/rock_terrain.tres" id="2_0wfyh"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://dtv4bgbjw61gc" path="res://resources/grass_terrain.tres" id="4_jyhfs"]
 [ext_resource type="Resource" uid="uid://oid5nb5hjiur" path="res://resources/ice_terrain.tres" id="5_tipki"]
 [ext_resource type="Resource" uid="uid://5tlm3fw8uk2o" path="res://resources/human_terrain.tres" id="7_85g3d"]
+[ext_resource type="PackedScene" uid="uid://b8vc218vg401s" path="res://scenes/bear.tscn" id="9_85g3d"]
 
 [node name="main" type="Node2D"]
 
@@ -19,3 +20,5 @@ z_index = 1
 [node name="terrain_generator" parent="." instance=ExtResource("2_jyhfs")]
 terrains = Array[ExtResource("3_tbgi4")]([ExtResource("3_o6xl0"), ExtResource("4_jyhfs"), ExtResource("5_tipki"), ExtResource("2_0wfyh")])
 null_terrain = ExtResource("7_85g3d")
+
+[node name="bear" parent="." instance=ExtResource("9_85g3d")]
