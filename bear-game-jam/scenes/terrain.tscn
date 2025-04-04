@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://daoiw7wwu4544"]
+[gd_scene load_steps=3 format=3 uid="uid://daoiw7wwu4544"]
 
 [ext_resource type="Script" uid="uid://lr3axcyuocan" path="res://scripts/terrain.gd" id="1_l86fn"]
+[ext_resource type="Resource" uid="uid://c1gkx3yretey7" path="res://resources/rock_terrain.tres" id="2_oqplg"]
 
 [node name="Terrain" type="Node2D"]
 script = ExtResource("1_l86fn")
+background_res = ExtResource("2_oqplg")

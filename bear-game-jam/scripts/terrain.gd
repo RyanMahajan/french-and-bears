@@ -1,4 +1,5 @@
 extends Node2D
+class_name Terrain
 
 @export var background_res: terrain_res
 

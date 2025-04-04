@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://6cl5e8ckhnpf"]
+[gd_scene load_steps=5 format=3 uid="uid://6cl5e8ckhnpf"]
 
 [ext_resource type="Script" uid="uid://wkn832f1wnrk" path="res://terrain_generator.gd" id="1_vj78e"]
+[ext_resource type="Script" uid="uid://twgk4tukwufi" path="res://scripts/terrain_res.gd" id="2_us06m"]
+[ext_resource type="Resource" uid="uid://dtv4bgbjw61gc" path="res://resources/grass_terrain.tres" id="3_86c0g"]
+[ext_resource type="Resource" uid="uid://c1gkx3yretey7" path="res://resources/rock_terrain.tres" id="4_cn7yd"]
 
 [node name="terrain_generator" type="Node2D"]
 script = ExtResource("1_vj78e")
+terrains = Array[ExtResource("2_us06m")]([ExtResource("3_86c0g"), ExtResource("4_cn7yd")])
