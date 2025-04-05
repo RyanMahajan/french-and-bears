@@ -6,8 +6,9 @@
 radius = 51.0
 height = 289.0
 
-[node name="bear" type="CharacterBody2D"]
+[node name="bear" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_aquv5")
+sprite = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, -2)

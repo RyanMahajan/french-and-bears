@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://cuvddcwlwl25a"]
+
+[ext_resource type="Texture2D" uid="uid://c4vn1oqxa8pph" path="res://assets/characters/french_man.PNG" id="1_la3tu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8stkt"]
+atlas = ExtResource("1_la3tu")
+region = Rect2(600, 500, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftx3h"]
+atlas = ExtResource("1_la3tu")
+region = Rect2(400, 500, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_la3tu"]
+atlas = ExtResource("1_la3tu")
+region = Rect2(200, 500, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxuwt"]
+atlas = ExtResource("1_la3tu")
+region = Rect2(600, 500, 200, 200)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8stkt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftx3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la3tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxuwt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]

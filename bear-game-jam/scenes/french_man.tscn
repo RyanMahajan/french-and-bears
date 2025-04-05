@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://j7nv4yhokdrx"]
+
+[ext_resource type="SpriteFrames" uid="uid://cuvddcwlwl25a" path="res://resources/animations/french_man_anim.tres" id="1_hneye"]
+[ext_resource type="Script" uid="uid://0fw3pk3chwpi" path="res://scripts/french_man.gd" id="1_hwt7p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hneye"]
+radius = 58.0
+height = 200.0
+
+[node name="french_man" type="CharacterBody2D"]
+position = Vector2(100, 100)
+script = ExtResource("1_hwt7p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_hneye")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, -11)
+shape = SubResource("CapsuleShape2D_hneye")

@@ -6,7 +6,7 @@ extends Node2D
 var terrain_array: Array[Array]
 var spawn_crystals: Array[int]
 
-var bear_array: Array[Array]
+var bear_array: Array[Bear]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +15,8 @@ func _ready() -> void:
 	terrain_generator.set_terrain_bottom(terrain_array, spawn_crystals)
 	terrain_generator.add_to_scene(terrain_array)
 	
-	
+	bear_spawner.set_bear_top(bear_array, spawn_crystals)
+	bear_spawner.add_to_scene(bear_array)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

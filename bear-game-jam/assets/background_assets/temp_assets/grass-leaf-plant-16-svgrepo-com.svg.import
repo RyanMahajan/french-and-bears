@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3n6ulyl08vtv"
-path="res://.godot/imported/grass-leaf-plant-16-svgrepo-com.svg-b3277d2caa1ba8fa34e6aecfa8114084.ctex"
+path="res://.godot/imported/grass-leaf-plant-16-svgrepo-com.svg-f0760cab66b04ff9d18ba16afa19f9d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background_assets/grass-leaf-plant-16-svgrepo-com.svg"
-dest_files=["res://.godot/imported/grass-leaf-plant-16-svgrepo-com.svg-b3277d2caa1ba8fa34e6aecfa8114084.ctex"]
+source_file="res://assets/background_assets/temp_assets/grass-leaf-plant-16-svgrepo-com.svg"
+dest_files=["res://.godot/imported/grass-leaf-plant-16-svgrepo-com.svg-f0760cab66b04ff9d18ba16afa19f9d6.ctex"]
 
 [params]
 

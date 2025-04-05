@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="terrain_res" load_steps=6 format=3 uid="uid://5tlm3fw8uk2o"]
 
-[ext_resource type="Texture2D" uid="uid://cd1y1rl8sgnvy" path="res://assets/background_assets/grass-leaf-plant-11-svgrepo-com.svg" id="1_6wrb4"]
-[ext_resource type="Texture2D" uid="uid://c3n6ulyl08vtv" path="res://assets/background_assets/grass-leaf-plant-16-svgrepo-com.svg" id="2_fne66"]
-[ext_resource type="Texture2D" uid="uid://0jv7en0tumg" path="res://assets/background_assets/grass-leaf-plant-20-svgrepo-com.svg" id="3_mhr8f"]
-[ext_resource type="Texture2D" uid="uid://d4co4ox6xyvje" path="res://assets/background_assets/tree.svg" id="4_ktc6f"]
+[ext_resource type="Texture2D" uid="uid://cd1y1rl8sgnvy" path="res://assets/background_assets/temp_assets/grass-leaf-plant-11-svgrepo-com.svg" id="1_6wrb4"]
+[ext_resource type="Texture2D" uid="uid://c3n6ulyl08vtv" path="res://assets/background_assets/temp_assets/grass-leaf-plant-16-svgrepo-com.svg" id="2_fne66"]
+[ext_resource type="Texture2D" uid="uid://0jv7en0tumg" path="res://assets/background_assets/temp_assets/grass-leaf-plant-20-svgrepo-com.svg" id="3_mhr8f"]
+[ext_resource type="Texture2D" uid="uid://d4co4ox6xyvje" path="res://assets/background_assets/temp_assets/tree.svg" id="4_ktc6f"]
 [ext_resource type="Script" uid="uid://twgk4tukwufi" path="res://scripts/terrain_res.gd" id="5_ckgl4"]
 
 [resource]

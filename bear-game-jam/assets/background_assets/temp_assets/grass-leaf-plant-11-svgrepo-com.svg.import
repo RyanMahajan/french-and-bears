@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq1ljd23fkbr3"
-path="res://.godot/imported/bears.PNG-7c9a261c3186e48324b515b84d690051.ctex"
+uid="uid://cd1y1rl8sgnvy"
+path="res://.godot/imported/grass-leaf-plant-11-svgrepo-com.svg-43f002eca42d02ca4ddbf10064ca8154.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/bears.PNG"
-dest_files=["res://.godot/imported/bears.PNG-7c9a261c3186e48324b515b84d690051.ctex"]
+source_file="res://assets/background_assets/temp_assets/grass-leaf-plant-11-svgrepo-com.svg"
+dest_files=["res://.godot/imported/grass-leaf-plant-11-svgrepo-com.svg-43f002eca42d02ca4ddbf10064ca8154.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
