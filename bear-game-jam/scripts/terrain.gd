@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 class_name Terrain
 
 @export var background_res: terrain_res
@@ -33,7 +33,6 @@ func _ready() -> void:
 	load_elements()
 	load_background()
 	create_background()
-
 
 func create_background():
 	var back = background.duplicate()

@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	if direction != Vector2.ZERO:
 		last_move_direction = direction
 
-	rotation = last_move_direction.angle() + PI / 2
+	rotation = lerp_angle(rotation, last_move_direction.angle() + PI / 2, 0.1)
 	update_animation(direction)
 
 	move_and_slide()

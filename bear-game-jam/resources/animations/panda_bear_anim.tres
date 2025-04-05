@@ -1,0 +1,47 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://ccpb0rga56tst"]
+
+[ext_resource type="Texture2D" uid="uid://daucwftb0d3cs" path="res://assets/characters/bears.PNG" id="1_s1iqj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ic4d"]
+atlas = ExtResource("1_s1iqj")
+region = Rect2(459, 344, 459, 344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kkk3"]
+atlas = ExtResource("1_s1iqj")
+region = Rect2(0, 344, 459, 344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p845n"]
+atlas = ExtResource("1_s1iqj")
+region = Rect2(459, 344, 459, 344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv2tk"]
+atlas = ExtResource("1_s1iqj")
+region = Rect2(918, 344, 459, 344)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ic4d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kkk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p845n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv2tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p845n")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]

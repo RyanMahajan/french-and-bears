@@ -1,20 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8vc218vg401s"]
+[gd_scene load_steps=3 format=3 uid="uid://b8vc218vg401s"]
 
-[ext_resource type="Texture2D" uid="uid://dvwgyn50v8cvo" path="res://icon.svg" id="1_a3xf0"]
-[ext_resource type="Script" uid="uid://cy7n17nwftwn4" path="res://scenes/bear.gd" id="1_aquv5"]
+[ext_resource type="Script" uid="uid://cy7n17nwftwn4" path="res://scripts/bear.gd" id="1_aquv5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aquv5"]
-size = Vector2(449, 131)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0uag"]
+radius = 51.0
+height = 289.0
 
 [node name="bear" type="CharacterBody2D"]
 script = ExtResource("1_aquv5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(157.5, 0.5)
-shape = SubResource("RectangleShape2D_aquv5")
+position = Vector2(7, -2)
+shape = SubResource("CapsuleShape2D_v0uag")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.360784, 1, 1)
-position = Vector2(158, 0)
-scale = Vector2(3.46875, 1)
-texture = ExtResource("1_a3xf0")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+animation = &""
