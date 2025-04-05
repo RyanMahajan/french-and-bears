@@ -5,7 +5,7 @@ enum SPECIES {PANDA, BROWN, POLAR, BLACK}
 enum STATE {EXPLORE, ATTACK}
 
 @export var bear_type: SPECIES
-@export var sprite: AnimatedSprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var target_dir: Vector2
 var curr_terrain: Terrain

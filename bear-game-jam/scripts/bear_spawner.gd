@@ -1,6 +1,8 @@
 extends Node2D
 class_name BearSpawner
 
+var BearScene = preload("res://scenes/bear.tscn")
+
 @export var bear_clan_size: int = 50
 @export var spawn_rings: int = 10
 
@@ -17,9 +19,8 @@ func set_bear_bottom():
 	pass
 
 func new_bear(type: Bear.SPECIES) -> Bear:
-	var bear = Bear.new()
+	var bear = BearScene.instantiate()
 	bear.bear_type = type
-	bear.sprite = bear.get_child(0)
 	return bear
 
 func get_bear_spawns(index: int) -> Array[Vector2]:

@@ -1,18 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8vc218vg401s"]
+[gd_scene load_steps=4 format=3 uid="uid://b8vc218vg401s"]
 
 [ext_resource type="Script" uid="uid://cy7n17nwftwn4" path="res://scripts/bear.gd" id="1_aquv5"]
+[ext_resource type="SpriteFrames" uid="uid://ccpb0rga56tst" path="res://resources/animations/panda_bear_anim.tres" id="2_aquv5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0uag"]
 radius = 51.0
 height = 289.0
 
-[node name="bear" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
+[node name="bear" type="CharacterBody2D"]
 script = ExtResource("1_aquv5")
-sprite = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, -2)
 shape = SubResource("CapsuleShape2D_v0uag")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-animation = &""
+sprite_frames = ExtResource("2_aquv5")
+animation = &"idle"

@@ -19,7 +19,6 @@ func load_elements():
 	for element in elements:
 		var elem = Sprite2D.new()
 		elem.texture = element
-		elem.scale = Vector2(0.1, 0.1)
 		background_elements.append(elem)
 
 func load_background():
@@ -38,7 +37,7 @@ func create_background():
 	var back = background.duplicate()
 	back.visible = true
 	add_child(back)
-	for i in range(5):
+	for i in range(2):
 		var spawn = spawn_locations.pick_random()
 		while spawn.marked:
 			spawn = spawn_locations.pick_random()
