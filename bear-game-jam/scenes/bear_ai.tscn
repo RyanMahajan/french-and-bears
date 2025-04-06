@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8p5wi7e1amb3"]
+
+[ext_resource type="Script" uid="uid://ckqdex067knj5" path="res://scripts/bear_ai.gd" id="1_yxc25"]
+
+[node name="bear_ai" type="Node2D"]
+script = ExtResource("1_yxc25")

@@ -1,8 +1,6 @@
 extends Bear
 class_name Player
 
-var last_move_direction: Vector2 = Vector2.DOWN
-
 func _physics_process(delta: float) -> void:
 	var direction = Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()
 	velocity = direction * SPEED
@@ -14,11 +12,3 @@ func _physics_process(delta: float) -> void:
 	update_animation(direction)
 
 	move_and_slide()
-
-func update_animation(dir: Vector2):
-	if dir.length() > 0:
-		if not sprite.is_playing() or sprite.animation != "walk":
-			sprite.play("walk")
-	else:
-		if sprite.animation != "idle":
-			sprite.play("idle")
