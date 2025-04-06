@@ -18,7 +18,7 @@ bear_spawner = NodePath("bear_spawner")
 
 [node name="Player" parent="." instance=ExtResource("1_tipki")]
 z_index = 1
-bear_type = 3
+bear_type = 2
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 

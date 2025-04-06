@@ -25,6 +25,6 @@ region = Rect2(240, 520, 168, 280)
 
 [resource]
 script = ExtResource("5_yy7ex")
-spawns = Array[Vector2]([Vector2(414, 63), Vector2(128, 426), Vector2(363, 427), Vector2(259, 311), Vector2(443, 266), Vector2(344, 159), Vector2(214, 38), Vector2(150, 196), Vector2(86, 115), Vector2(69, 315)])
+spawns = Array[Vector2]([Vector2(414, 163), Vector2(128, 426), Vector2(363, 407), Vector2(259, 311), Vector2(403, 266), Vector2(344, 159), Vector2(214, 138), Vector2(150, 196), Vector2(186, 115), Vector2(169, 315)])
 elements = Array[Texture2D]([SubResource("AtlasTexture_5riv4"), SubResource("AtlasTexture_2veh3"), SubResource("AtlasTexture_7j0v6"), SubResource("AtlasTexture_4i0me"), SubResource("AtlasTexture_g8m8l")])
 background = Color(0.81493, 0.749263, 0.4447, 1)
