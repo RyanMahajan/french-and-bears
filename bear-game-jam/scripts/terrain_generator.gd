@@ -1,6 +1,8 @@
 extends Node2D
 class_name TerrainGenerator
 
+var TerrainScene = preload("res://scenes/terrain.tscn")
+
 @export var terrains: Array[terrain_res]
 @export var null_terrain: terrain_res
 @export var spawn_rings: int = 10
@@ -15,11 +17,11 @@ func set_terrain_top(terrain_array: Array[Array], spawn_crystals: Array[int]):
 		var spawn_row: Array[Terrain] = []
 		for j in range(0, spawn_rings*2):
 			if j < spawn_rings-i:
-				spawn_row.append(new_terrain(terrains[spawn_crystals[0]]))
+				spawn_row.append(new_terrain(terrains[spawn_crystals[0]], spawn_crystals[0]))
 			elif j > spawn_rings+i-1:
-				spawn_row.append(new_terrain(terrains[spawn_crystals[1]]))
+				spawn_row.append(new_terrain(terrains[spawn_crystals[1]], spawn_crystals[1]))
 			else:
-				spawn_row.append(new_terrain(null_terrain))
+				spawn_row.append(new_terrain(null_terrain, -1))
 		terrain_array.append(spawn_row)
 
 func set_terrain_bottom(terrain_array: Array[Array], spawn_crystals: Array[int]):
@@ -27,16 +29,17 @@ func set_terrain_bottom(terrain_array: Array[Array], spawn_crystals: Array[int])
 		var spawn_row: Array[Terrain] = []
 		for j in range(0, spawn_rings*2):
 			if j < i+1:
-				spawn_row.append(new_terrain(terrains[spawn_crystals[2]]))
+				spawn_row.append(new_terrain(terrains[spawn_crystals[2]], spawn_crystals[2]))
 			elif j > spawn_rings*2-2-i:
-				spawn_row.append(new_terrain(terrains[spawn_crystals[3]]))
+				spawn_row.append(new_terrain(terrains[spawn_crystals[3]], spawn_crystals[3]))
 			else:
-				spawn_row.append(new_terrain(null_terrain))
+				spawn_row.append(new_terrain(null_terrain, -1))
 		terrain_array.append(spawn_row)
 
-func new_terrain(res: terrain_res) -> Terrain:
-	var ter = Terrain.new()
+func new_terrain(res: terrain_res, crystal: int) -> Terrain:
+	var ter = TerrainScene.instantiate()
 	ter.background_res = res
+	ter.terrain_crystal = crystal
 	return ter
 
 func add_to_scene(terrain_array: Array[Array]):

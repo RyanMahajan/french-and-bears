@@ -15,7 +15,10 @@ func _ready() -> void:
 	terrain_generator.set_terrain_bottom(terrain_array, spawn_crystals)
 	terrain_generator.add_to_scene(terrain_array)
 	
-	bear_spawner.set_bear_top(bear_array, spawn_crystals)
+	bear_spawner.set_bear_clan(bear_array, spawn_crystals, 0)
+	bear_spawner.set_bear_clan(bear_array, spawn_crystals, 1)
+	bear_spawner.set_bear_clan(bear_array, spawn_crystals, 2)
+	bear_spawner.set_bear_clan(bear_array, spawn_crystals, 3)
 	bear_spawner.add_to_scene(bear_array)
 
 

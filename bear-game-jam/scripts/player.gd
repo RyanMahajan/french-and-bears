@@ -1,9 +1,7 @@
-extends CharacterBody2D
-
-@export var sprite: AnimatedSprite2D
+extends Bear
+class_name Player
 
 var last_move_direction: Vector2 = Vector2.DOWN
-const SPEED = 300.0
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()

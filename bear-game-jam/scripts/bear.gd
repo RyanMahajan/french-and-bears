@@ -29,6 +29,17 @@ func load_target():
 func load_terrain():
 	pass
 
+func get_terrain_res() -> terrain_res:
+	if bear_type == SPECIES.PANDA:
+		return preload("res://resources/terrains/bamboo_terrain.tres")
+	elif bear_type == SPECIES.BLACK:
+		return preload("res://resources/terrains/rock_terrain.tres")
+	elif bear_type == SPECIES.BROWN:
+		return preload("res://resources/terrains/grass_terrain.tres")
+	elif bear_type == SPECIES.POLAR:
+		return preload("res://resources/terrains/ice_terrain.tres")
+	return null
+
 func _ready():
 	load_type()
 	load_target()
