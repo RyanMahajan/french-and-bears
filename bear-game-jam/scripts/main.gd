@@ -2,6 +2,8 @@ extends Node2D
 
 @export var terrain_generator: TerrainGenerator
 @export var bear_spawner: BearSpawner
+@export var bear_ai: BearAI
+@export var player: Player
 
 var terrain_array: Array[Array]
 var spawn_crystals: Array[int]
@@ -20,6 +22,8 @@ func _ready() -> void:
 	bear_spawner.set_bear_clan(bear_array, spawn_crystals, 2)
 	bear_spawner.set_bear_clan(bear_array, spawn_crystals, 3)
 	bear_spawner.add_to_scene(bear_array)
+	
+	bear_ai.set_arrays(bear_array, terrain_array)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

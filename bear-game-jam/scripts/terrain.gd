@@ -2,7 +2,7 @@ extends Area2D
 class_name Terrain
 
 @export var background_res: terrain_res
-@export var terrain_crystal: int
+@export var terrain_crystal: int = -1
 
 var spawn_locations: Array[CustomMark]
 var background_elements: Array[Sprite2D]

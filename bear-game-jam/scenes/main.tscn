@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbd1cyu15gj5y"]
+[gd_scene load_steps=12 format=3 uid="uid://cbd1cyu15gj5y"]
 
 [ext_resource type="Script" uid="uid://b52c1igtv10qi" path="res://scripts/main.gd" id="1_choun"]
 [ext_resource type="PackedScene" uid="uid://cf2x5ntnsk0km" path="res://scenes/player.tscn" id="1_tipki"]
@@ -10,11 +10,14 @@
 [ext_resource type="Resource" uid="uid://dtv4bgbjw61gc" path="res://resources/terrains/grass_terrain.tres" id="4_jyhfs"]
 [ext_resource type="Resource" uid="uid://oid5nb5hjiur" path="res://resources/terrains/ice_terrain.tres" id="5_tipki"]
 [ext_resource type="Resource" uid="uid://5tlm3fw8uk2o" path="res://resources/terrains/human_terrain.tres" id="7_85g3d"]
+[ext_resource type="PackedScene" uid="uid://b8p5wi7e1amb3" path="res://scenes/bear_ai.tscn" id="11_ya4ey"]
 
-[node name="main" type="Node2D" node_paths=PackedStringArray("terrain_generator", "bear_spawner")]
+[node name="main" type="Node2D" node_paths=PackedStringArray("terrain_generator", "bear_spawner", "bear_ai", "player")]
 script = ExtResource("1_choun")
 terrain_generator = NodePath("terrain_generator")
 bear_spawner = NodePath("bear_spawner")
+bear_ai = NodePath("bear_ai")
+player = NodePath("Player")
 
 [node name="Player" parent="." instance=ExtResource("1_tipki")]
 z_index = 1
@@ -28,3 +31,5 @@ z_index = 1
 [node name="terrain_generator" parent="." instance=ExtResource("2_jyhfs")]
 terrains = Array[ExtResource("3_tbgi4")]([ExtResource("3_o6xl0"), ExtResource("4_jyhfs"), ExtResource("5_tipki"), ExtResource("2_0wfyh")])
 null_terrain = ExtResource("7_85g3d")
+
+[node name="bear_ai" parent="." instance=ExtResource("11_ya4ey")]
