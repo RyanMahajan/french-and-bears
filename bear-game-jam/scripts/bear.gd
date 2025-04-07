@@ -2,17 +2,17 @@ extends CharacterBody2D
 class_name Bear
 
 enum SPECIES {PANDA, BROWN, POLAR, BLACK}
-enum STATE {EXPLORE, DEFEND, ATTACK}
+enum STATE {IDLE, EXPLORE, DEFEND, ATTACK}
 
 @export var bear_type: SPECIES
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var target_dir: Vector2
 var curr_terrain: Terrain
-var bear_state: STATE = STATE.EXPLORE
+var bear_state: STATE = STATE.IDLE
 
 var last_move_direction: Vector2 = Vector2.DOWN
-const SPEED = 300.0
+var SPEED = 200.0
 
 func load_type():
 	if bear_type == SPECIES.PANDA:
@@ -35,12 +35,30 @@ func get_terrain_res() -> terrain_res:
 		return preload("res://resources/terrains/ice_terrain.tres")
 	return null
 
+func load_collisions():
+	if bear_type == SPECIES.PANDA:
+		collision_layer = 1 << 2
+		collision_mask = (1 << 3) | (1 << 4) | (1 << 5) | (1 << 1)
+	elif bear_type == SPECIES.BLACK:
+		collision_layer = 1 << 3
+		collision_mask = (1 << 2) | (1 << 4) | (1 << 5) | (1 << 1)
+	elif bear_type == SPECIES.BROWN:
+		collision_layer = 1 << 4
+		collision_mask = (1 << 3) | (1 << 2) | (1 << 5) | (1 << 1)
+	elif bear_type == SPECIES.POLAR:
+		collision_layer = 1 << 5
+		collision_mask = (1 << 3) | (1 << 4) | (1 << 2) | (1 << 1)
+
 func _ready():
 	load_type()
+	load_collisions()
+
+func _process(delta: float) -> void:
+	pass
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Vector2.ZERO
-	if target_dir:
+	if bear_state == STATE.EXPLORE:
 		direction = (target_dir - global_position).normalized()
 	velocity = direction * SPEED
 	

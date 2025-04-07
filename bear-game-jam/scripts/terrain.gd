@@ -48,6 +48,8 @@ func clear_terrain():
 	background_elements.clear()
 
 func create_terrain():
+	collision_layer = 1 << 1
+	collision_mask = (1 << 2) | (1 << 3) | (1 << 4) | (1 << 5)
 	clear_terrain()
 	load_spawns()
 	load_elements()

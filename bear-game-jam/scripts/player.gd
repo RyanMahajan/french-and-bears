@@ -2,6 +2,7 @@ extends Bear
 class_name Player
 
 func _physics_process(delta: float) -> void:
+	SPEED = 300.0
 	var direction = Vector2(Input.get_axis("left", "right"), Input.get_axis("up", "down")).normalized()
 	velocity = direction * SPEED
 	

@@ -3,12 +3,12 @@ class_name BearSpawner
 
 var BearScene = preload("res://scenes/bear.tscn")
 
-@export var bear_clan_size: int = 30
+@export var bear_clan_size: int = 20
 @export var spawn_rings: int = 10
 
 func set_bear_clan(bear_array: Array[Bear], spawn_crystals: Array[int], crystal: int):
-	var spawn_rate: int = bear_clan_size/spawn_rings
-	for i in range(spawn_rate, spawn_rings):
+	var spawn_rate: int = bear_clan_size/spawn_rings*2
+	for i in range(spawn_rings/2, spawn_rings):
 		for j in range(0, spawn_rate):
 			var bear = new_bear(spawn_crystals[crystal])
 			var bear_spawns = get_bear_spawns(i+1, crystal)

@@ -24,6 +24,8 @@ func _ready() -> void:
 	bear_spawner.add_to_scene(bear_array)
 	
 	bear_ai.set_arrays(bear_array, terrain_array)
+	bear_ai.set_bear_terrains()
+	bear_ai._on_bear_ai_timer_timeout()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
