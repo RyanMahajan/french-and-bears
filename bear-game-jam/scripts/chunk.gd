@@ -1,8 +1,9 @@
 # Chunk.gd
 extends Node2D
+class_name Chunk
 
 const CHUNK_SIZE := 64  # tiles per chunk
-const TILE_SIZE := 8  # pixels per tile
+const TILE_SIZE := 1  # pixels per tile
 
 @export var zone_generator: ZoneGenerator
 

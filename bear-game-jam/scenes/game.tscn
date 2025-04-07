@@ -8,4 +8,7 @@
 [node name="world" type="Node2D" parent="."]
 script = ExtResource("1_uwrxv")
 
-[node name="Player" parent="." instance=ExtResource("2_yqjtg")]
+[node name="Player" parent="." node_paths=PackedStringArray("world") instance=ExtResource("2_yqjtg")]
+world = NodePath("../world")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
