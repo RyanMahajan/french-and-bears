@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="bear-game-jam"
-run/main_scene="uid://cbd1cyu15gj5y"
+run/main_scene="uid://b1i6dc8tead2g"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
